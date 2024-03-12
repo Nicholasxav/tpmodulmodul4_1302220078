@@ -1,0 +1,50 @@
+// See https://aka.ms/new-console-template for more information
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace Modul4
+{
+
+    internal class kodePos
+    {
+        public string kelurahan;
+        public int kodepos;
+        public List<kodePos> listKodepost = new List<kodePos>();
+        public kodePos(string a = "", int k = 0)
+        {
+            kelurahan = a;
+            kodepos = k;
+        }
+
+        public void setKodePost()
+        {
+            listKodepost.Add(new kodePos("Batununggal", 40266));
+            listKodepost.Add(new kodePos("Kujangsari", 40287));
+            listKodepost.Add(new kodePos("Mengger", 40267));
+            listKodepost.Add(new kodePos("Wates", 40256));
+            listKodepost.Add(new kodePos("Cijaura", 40287));
+            listKodepost.Add(new kodePos("Jatisari", 40286));
+            listKodepost.Add(new kodePos("Margasari", 40286));
+            listKodepost.Add(new kodePos("Sekejati", 40286));
+            listKodepost.Add(new kodePos("Kebonwaru", 40272));
+            listKodepost.Add(new kodePos("Maleer", 40274));
+            listKodepost.Add(new kodePos("Samoja", 40273));
+        }
+
+        public void getKodePos()
+        {
+            Console.WriteLine("Kelurahan\tKode Pos");
+            foreach (kodePos k in listKodepost)
+            {
+                string kelPad = k.kelurahan.PadRight(15);
+                Console.Write(kelPad + "\t" + k.kodepos);
+                Console.WriteLine();
+            }
+
+        }
+
+    }
+}
+
